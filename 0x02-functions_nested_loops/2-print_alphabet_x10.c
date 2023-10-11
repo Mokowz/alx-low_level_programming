@@ -1,16 +1,10 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * main - Print alphabets 10 times
+ * print_alphabet_x10 - Print alphabets 10 times
  *
- * Return: Always 0
+ * Return: Null
  */
-int main(void)
-{
-	print_alphabet_x10();
-	return (0);
-}
 void print_alphabet_x10(void)
 {
 	int i = 0;
@@ -20,9 +14,9 @@ void print_alphabet_x10(void)
 	{
 		for (c = 'a'; c <= 'z'; c++)
 		{
-			putchar(c);
+			_putchar(c);
 		}
-		putchar('\n');
+		_putchar('\n');
 		i++;
 	}
 }
