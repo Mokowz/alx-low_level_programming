@@ -19,10 +19,9 @@ int main(void)
 		{
 			sum += k;
 		}
-	
 		i++;
 	}
-	printf("Sum = %ld\n", sum);
+	printf("%ld\n", sum);
 
 	return (0);
 }
