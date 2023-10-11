@@ -3,7 +3,8 @@
 
 /**
  * print_to_98 - print all numbers to 98
- * @n - starting integer
+ * @n: starting integer
+ * Description: Print all numbers
  *
  * Return: void
  */
