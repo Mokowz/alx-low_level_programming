@@ -2,6 +2,8 @@
 
 /**
  * _abs - Compute absolute value of a number
+ * @n: Integer 1
+ * Description: Give integer return absolute value
  *
  * Return: Number
  */
