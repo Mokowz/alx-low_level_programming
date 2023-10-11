@@ -6,4 +6,5 @@ int print_sign(int n);
 int _abs(int);
 int print_last_digit(int);
 int add(int, int);
-int _putchar(char c);;
+int _putchar(char c);
+void print_to_98(int n);
