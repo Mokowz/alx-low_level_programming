@@ -2,6 +2,8 @@
 
 /**
  * print_sign: Print sign of a number
+ * @n: Integer
+ * Description: Pritn sign of number
  *
  * Return: 1 if n is greater than 0
  */

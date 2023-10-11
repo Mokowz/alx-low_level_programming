@@ -2,6 +2,8 @@
 
 /**
  * _isalpha - checks if c is a letter
+ * @c: Character
+ * Description: Check if c is letter
  *
  * Return: 1 if c is a letter
  */
