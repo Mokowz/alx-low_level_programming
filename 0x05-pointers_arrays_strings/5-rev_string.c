@@ -35,4 +35,5 @@ void swap_char(char *a, char *b)
 
 	temp = *a;
 	*a = *b;
-
+	*b = temp;
+}
