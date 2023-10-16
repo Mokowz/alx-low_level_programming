@@ -16,7 +16,7 @@ void rev_string(char *s)
 
 	while (length > i)
 	{
-		swap_char(s +length, s + i);
+		swap_char(s + length, s + i);
 		i++;
 		length--;
 	}
@@ -35,5 +35,4 @@ void swap_char(char *a, char *b)
 
 	temp = *a;
 	*a = *b;
-	*b = temp;
-}
+
