@@ -8,8 +8,8 @@
  */
 char *leet(char *s)
 {
-	char *orig = 'aAeEoOtTlL';
-	char *enc = '4433007711';
+	char *orig = "aAeEoOtTlL";
+	char *enc = "4433007711";
 	int i, j;
 
 	for (i = 0; s[i] != '\0'; i++)
