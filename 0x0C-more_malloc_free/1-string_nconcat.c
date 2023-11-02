@@ -12,7 +12,7 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int total_len = 0, lens1 = 0, lens2 = 0, i = 0, count = 0;
+	unsigned int total_len, lens1 = 0, lens2 = 0, i;
 	char *newstr;
 
 	if (s1 == NULL)
@@ -40,9 +40,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (newstr == NULL)
 		return (NULL);
 
-	for (i = 0; s1[i]; i++)
+	for (i = 0; i < lens1; i++)
 		newstr[i] = s1[i];
-	for (i = 0; s2[i]; i++)
+	for (i = 0; i < n; i++)
 		newstr[i + lens1] = s2[i];
 
 	newstr[i + lens1] = '\0';
