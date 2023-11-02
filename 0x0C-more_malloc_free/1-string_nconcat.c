@@ -38,7 +38,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	total_len = lens1 + n;
 
-	newstr = malloc(sizeof(char) * total_len);
+	newstr = malloc(sizeof(char) * (total_len + 1));
 
 	if (newstr == NULL)
 		return (NULL);
@@ -47,6 +47,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		newstr[i] = s1[i];
 	for (; count < n; count++)
 		newstr[i] = s2[count];
+
+	newstr[total_len] = '\0';
 
 	return (newstr);
 }
