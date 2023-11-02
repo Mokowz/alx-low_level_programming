@@ -20,17 +20,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	while (s1[i])
+	while (s1[lens1] != '\0')
 	{
 		lens1++;
-		i++;
 	}
-	i = 0;
 
-	while (s2[i])
+	while (s2[lens2] != '\0')
 	{
 		lens2++;
-		i++;
 	}
 
 	if (n >= lens2)
@@ -45,10 +42,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (i = 0; s1[i]; i++)
 		newstr[i] = s1[i];
-	for (; count < n; count++)
-		newstr[i] = s2[count];
+	for (i = 0; s2[i]; i++)
+		newstr[i + lens1] = s2[i];
 
-	newstr[total_len] = '\0';
+	newstr[i + lens1] = '\0';
 
 	return (newstr);
 }
