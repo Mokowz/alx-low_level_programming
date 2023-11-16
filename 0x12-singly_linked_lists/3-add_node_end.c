@@ -9,9 +9,13 @@
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *newNode = malloc(sizeof(list_t)), *p;
+	list_t *newNode = malloc(sizeof(list_t));
+	list_t *p;
 
 	if (newNode == NULL)
+		return (NULL);
+
+	if (str == NULL)
 		return (NULL);
 
 	if (*head == NULL)
