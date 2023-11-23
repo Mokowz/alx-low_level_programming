@@ -49,16 +49,16 @@ unsigned int binary_to_uint(const char *b)
 	int i, length;
 
 	sum = 0;
-	length = _strlen(b);
-
 	if (b == NULL)
 		return (sum);
 
-	for (i = (length - 1); i >= 0; i--)
+	length = _strlen(b);
+
+	for (i = length - 1; i >= 0; i--)
 	{
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
-		sum += (b[i] - '0') * (power(2, length - i - 1));
+		sum += (b[i] - '0') * power(2, length - i - 1);
 	}
 
 	return (sum);
