@@ -1,6 +1,25 @@
 #include "main.h"
 
 /**
+ * _strlen - returns length of string (modified)
+ * @s: string (const)
+ * Return: length of string
+ */
+
+int _strlen(const char *s)
+{
+	int len = 0;
+
+	while (s[len] != '\0')
+	{
+		len++;
+	}
+
+	return (len);
+}
+
+
+/**
  * power - powers a number
  * @base: Number
  * @exp: Exponential
@@ -30,7 +49,7 @@ unsigned int binary_to_uint(const char *b)
 	int i, lenth;
 
 	sum = 0;
-	length = strlen(b);
+	length = _strlen(b);
 
 	if (b == NULL)
 		return (sum);
