@@ -1,6 +1,24 @@
 #include "main.h"
 
 /**
+ * power - powers a number
+ * @base: Number
+ * @exp: Exponential
+ * Return: numebr
+ */
+int power(int base, int exp)
+{
+	int i, num;
+
+	num = 1;
+	for (i = 0; i < exp; i++)
+		num *= base;
+
+	return (num);
+}
+
+
+/**
  * binary_to_uint - convert a binary to a number
  * @b: Binary number
  *
@@ -25,21 +43,4 @@ unsigned int binary_to_uint(const char *b)
 	}
 
 	return (sum);
-}
-
-/**
- * power - powers a number
- * @base: Number
- * @exp: Exponential
- * Return: numebr
- */
-int power(int base, int exp)
-{
-	int i, num;
-
-	num = 1;
-	for (i = 0; i < exp; i++)
-		num *= base;
-
-	return (num);
 }
