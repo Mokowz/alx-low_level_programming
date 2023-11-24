@@ -3,7 +3,7 @@
 /**
  * set_bit - set value of bit to 1
  * @n: Number
- * @: index
+ * @index: index
  * Return: 1 or -1
  */
 int set_bit(unsigned long int *n, unsigned int index)
