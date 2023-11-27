@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * error_handling - handle every error in the main funct
+ * error_printer - handle every error in the main funct
  * @error_code: Error number to print
  * @message: Text content
  * @type: Type of message
