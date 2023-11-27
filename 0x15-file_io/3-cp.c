@@ -18,6 +18,8 @@ void error_handling(int error_code, char *message, char type, ...)
 		dprintf(STDERR_FILENO, message, "");
 	else if (type == 'd')
 		dprintf(STDERR_FILENO, message, va_arg(args, int));
+	else
+		dprintf(STDERR_FILENO, "Cannot find the error\n");
 
 	va_end(args);
 	exit(error_code);
