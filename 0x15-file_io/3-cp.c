@@ -6,7 +6,7 @@
  * @message: Text content
  * @type: Type of message
  */
-void error_handling(int error_code, char *message, char type, ...)
+void error_printer(int error_code, char *message, char type, ...)
 {
 	va_list args;
 
@@ -38,26 +38,26 @@ int main(int ac, char *argv[])
 	char *buffer[1024];
 
 	if (ac != 3)
-		error_handling(97, "Usage: cp file_from file_to\n", 'n');
+		error_printer(97, "Usage: cp file_from file_to\n", 'n');
 	file_from = open(argv[1], O_RDONLY);
 	if (file_from == -1)
-		error_handling(98, "Error: Can't read from file %s\n", 's', argv[1]);
+		error_printer(98, "Error: Can't read from file %s\n", 's', argv[1]);
 	file_to = open(argv[2], O_TRUNC | O_CREAT | O_WRONLY, 0664);
 	if (file_to == -1)
-		error_handling(99, "Error: Can't write to %s\n", 's', argv[2]);
+		error_printer(99, "Error: Can't write to %s\n", 's', argv[2]);
 
 	while ((bytes_read = read(file_from, buffer, 1024)) > 0)
 	{
 		bytes_written = write(file_to, buffer, bytes_read);
 		if (bytes_written == -1)
-			error_handling(99, "Error: Can't write to %s\n", 's', argv[2]);
+			error_printer(99, "Error: Can't write to %s\n", 's', argv[2]);
 	}
 	if (bytes_read == -1)
-		error_handling(98, "Error: Can't read from file %s\n", 's', argv[1]);
+		error_printer(98, "Error: Can't read from file %s\n", 's', argv[1]);
 	if (close(file_from) == -1)
-		error_handling(100, "Error: Can't close fd %d\n", 'd', file_from);
+		error_printer(100, "Error: Can't close fd %d\n", 'd', file_from);
 	if (close(file_to) == -1)
-		error_handling(100, "Error: Can't close fd %d\n", 'd', file_to);
+		error_printer(100, "Error: Can't close fd %d\n", 'd', file_to);
 
 	return (0);
 }
