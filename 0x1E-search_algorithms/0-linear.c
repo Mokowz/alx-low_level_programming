@@ -1,4 +1,4 @@
-#include "search.h"
+#include "search_algos.h"
 /**
  * linear_search - searches for a value in a sorted array of integers
  * @array: array of integers
